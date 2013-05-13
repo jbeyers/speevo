@@ -20,31 +20,31 @@ void setup()
 void loop() {
   for (i=0; i<5; i++) {
   PORTD = one[i];
-  delayMicroseconds(1800);
+  delayMicroseconds(3600);
   };
   for (i=0; i<5; i++) {
   PORTD = one[i];
-  delayMicroseconds(18000/15);
+  delayMicroseconds(36000/15);
   };
   for (i=0; i<5; i++) {
   PORTD = five[i];
-  delayMicroseconds(18000/15);
+  delayMicroseconds(36000/15);
   };
   for (i=0; i<5; i++) {
   PORTD = one[i];
-  delayMicroseconds(18000/20);
+  delayMicroseconds(36000/20);
   };
   for (i=0; i<5; i++) {
   PORTD = two[i];
-  delayMicroseconds(18000/25);
+  delayMicroseconds(36000/25);
   };
   for (i=0; i<5; i++) {
   PORTD = five[i];
-  delayMicroseconds(18000/25);
+  delayMicroseconds(36000/25);
   };
   for (i=0; i<5; i++) {
   PORTD = one[i];
-  delayMicroseconds(18000/30);
+  delayMicroseconds(36000/30);
   };
-  delayMicroseconds(1800);
+  delayMicroseconds(3600);
 }

@@ -13,36 +13,27 @@ int i = 0;
 
 void setup() {
     DDRD = 0xff;
+    pinMode(12, INPUT);
+    digitalWrite(12, HIGH);
+    
 }
 
 void loop() {
+    while(digitalRead(12) != 0) {};
+    int k;
+    k = printit(one, 10);
+    k = printit(one, 15);
+    k = printit(five, 15);
+    k = printit(one, 20);
+    k = printit(two, 25);
+    k = printit(five, 25);
+    k = printit(one, 30);
+}
+
+int printit(byte dots[], int speed){
     for (i=0; i<5; i++) {
-        PORTD = one[i];
-        delayMicroseconds(3600);
+        PORTD = dots[i];
+        delayMicroseconds(36576/speed);
     };
-    for (i=0; i<5; i++) {
-        PORTD = one[i];
-        delayMicroseconds(36000/15);
-    };
-    for (i=0; i<5; i++) {
-        PORTD = five[i];
-        delayMicroseconds(36000/15);
-    };
-    for (i=0; i<5; i++) {
-        PORTD = one[i];
-        delayMicroseconds(36000/20);
-    };
-    for (i=0; i<5; i++) {
-        PORTD = two[i];
-        delayMicroseconds(36000/25);
-    };
-    for (i=0; i<5; i++) {
-        PORTD = five[i];
-        delayMicroseconds(36000/25);
-    };
-    for (i=0; i<5; i++) {
-        PORTD = one[i];
-        delayMicroseconds(36000/30);
-    };
-    delayMicroseconds(3600);
+    return 1;
 }

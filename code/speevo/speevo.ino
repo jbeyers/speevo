@@ -19,21 +19,20 @@ void setup() {
 }
 
 void loop() {
-    while(digitalRead(12) != 0) {};
-    int k;
-    k = printit(one, 10);
-    k = printit(one, 15);
-    k = printit(five, 15);
-    k = printit(one, 20);
-    k = printit(two, 25);
-    k = printit(five, 25);
-    k = printit(one, 30);
+    # Uncomment this line if you want to use an input to trigger the sequence rather than continuous flashing.
+    # while(digitalRead(12) != 0) {};
+    printit(one, 10);
+    printit(one, 15);
+    printit(five, 15);
+    printit(one, 20);
+    printit(two, 25);
+    printit(five, 25);
+    printit(one, 30);
 }
 
-int printit(byte dots[], int speed){
+void printit(byte dots[], int speed){
     for (i=0; i<5; i++) {
         PORTD = dots[i];
         delayMicroseconds(36576/speed);
     };
-    return 1;
 }

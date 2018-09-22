@@ -19,8 +19,8 @@ void setup() {
 }
 
 void loop() {
-    # Uncomment this line if you want to use an input to trigger the sequence rather than continuous flashing.
-    # while(digitalRead(12) != 0) {};
+    // Uncomment this line if you want to use an input to trigger the sequence rather than continuous flashing.
+    // while(digitalRead(12) != 0) {};
     printit(one, 10);
     printit(one, 15);
     printit(five, 15);
